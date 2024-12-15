@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link th:href="@{/css/login.css}" rel="stylesheet">
+    <link th:href="@{/lib/layui/css/layui.css}" rel="stylesheet">
+    <style>
+        #root {
+            height: 100%;
+        }
+
+        #login-card {
+            width: 400px;
+            border-radius: 12px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="root" class="flex-layout-center">
+    <div id="login-card">
+        <form action="/ui/login" method="post">
+            <label for="username" class="">
+                <input type="text" name="username" id="username" placeholder="请输入用户名" class="layui-input form-item">
+            </label>
+            <label for="password">
+                <input type="password" id="password" name="password" placeholder="请输入密码" class="layui-input form-item">
+            </label>
+            <button type="submit" class="layui-btn layui-btn-fluid form-item">登录</button>
+        </form>
+    </div>
+</div>
+<script th:src="@{/lib/layui/layui.js}"></script>
+</body>
+</html>
