@@ -1,8 +1,5 @@
 package cn.fullstack.od.common.core.exception;
 
-/**
- * @date 2024/12/5
- */
 public class BadOperationException extends RuntimeException {
 
     public BadOperationException() {

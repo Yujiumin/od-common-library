@@ -4,9 +4,6 @@ import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
-/**
- * @date 2024/11/27
- */
 public class LocalDateTimeUtils {
 
     private static final String DEFAULT_DATETIME_FORMAT_PATTERN = "yyyy-MM-dd HH:mm:ss";
@@ -40,8 +37,7 @@ public class LocalDateTimeUtils {
     }
 
     public static Date toJavaDate(LocalDateTime localDateTime) {
-        ZonedDateTime zonedDateTime = localDateTime.atZone(DEFAULT_ZONE_ID);
-        return toJavaDate(zonedDateTime);
+        return toJavaDate(localDateTime,DEFAULT_ZONE_ID);
     }
 
     public static Date toJavaDate(LocalDateTime localDateTime, ZoneId zoneId) {

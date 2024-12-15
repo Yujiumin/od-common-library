@@ -6,9 +6,6 @@ import com.alibaba.excel.support.ExcelTypeEnum;
 
 import java.io.InputStream;
 
-/**
- * @date 2024/11/28
- */
 public class ExcelUtils {
 
     public static void read(InputStream inputStream) {

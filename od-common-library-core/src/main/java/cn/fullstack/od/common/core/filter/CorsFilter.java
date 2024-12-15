@@ -2,7 +2,6 @@ package cn.fullstack.od.common.core.filter;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import org.springframework.context.annotation.Conditional;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
@@ -19,12 +18,11 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-/**
- * @author Yujiumin
- */
+import static cn.fullstack.od.common.core.config.BeanConditions.ENABLE_HTTP_CORS;
+
 @Slf4j
 @Component
-@ConditionalOnProperty(name = "", havingValue = "true")
+@ConditionalOnProperty(name = ENABLE_HTTP_CORS, havingValue = "true")
 public final class CorsFilter extends HttpFilter {
 
     private final List<HttpMethod> ACCESS_CONTROL_ALLOW_METHODS = new LinkedList<>();

@@ -1,8 +1,5 @@
 package cn.fullstack.od.common.core.exception;
 
-/**
- * @date 2024/12/4
- */
 public class OperationFailedException extends RuntimeException {
 
     public OperationFailedException() {
